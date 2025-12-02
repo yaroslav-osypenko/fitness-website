@@ -157,6 +157,7 @@ body {
 h1, h2, h3, h3, h4, h5, h6 {
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--color-light);
 }
 
 p {
@@ -171,7 +172,7 @@ p:not([class]):not(:last-child) {
 .title-medium {
   font-size: clamp(20px, 2.08vw, 40px);
   line-height: 1.3;
-  color: var(--color-light);
+
 }
 
 .button {
@@ -442,6 +443,38 @@ a:hover {
   margin-bottom: 37px;
 }
 
+.training-types {
+  position: relative;
+  background-color: var(--color-dark);
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+
+.training-types-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px;
+}
+
+.training-types-item {
+
+  --trainingTypesItemBgIconSize: 80px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--trainingTypesItemBgIconSize);
+  row-gap: 32px;
+  background: url('./icons/arrow-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
+}
+
+.training-types-item-title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
 
 @media (max-width: 1919px) {
   .motivation-card-image {
